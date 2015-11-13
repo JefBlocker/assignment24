@@ -36,7 +36,7 @@ let config = function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/write.tpl.html'
     })
     .state('root.revise', {
-      url: '/revise',      
+      url: '/revise/:promptlyId',      
       controller: 'ReviseController',
       templateUrl: 'templates/revise.tpl.html'
     });    

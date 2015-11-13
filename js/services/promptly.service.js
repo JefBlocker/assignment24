@@ -39,8 +39,8 @@ let PromptLyService = function($http, PARSE) {
   };
 
   this.addPromptLy = function (obj) {
-    let write = new PromptLy(obj);
-    return $http.post(url, write, PARSE.CONFIG);
+    let w = new PromptLy(obj);
+    return $http.post(url, w, PARSE.CONFIG);
   };
 
   this.update = function (obj) {

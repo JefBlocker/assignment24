@@ -35,7 +35,7 @@ var config = function config($stateProvider, $urlRouterProvider) {
     controller: 'WriteController',
     templateUrl: 'templates/write.tpl.html'
   }).state('root.revise', {
-    url: '/revise',
+    url: '/revise/:promptlyId',
     controller: 'ReviseController',
     templateUrl: 'templates/revise.tpl.html'
   });
@@ -142,7 +142,9 @@ Object.defineProperty(exports, '__esModule', {
 var WriteController = function WriteController($scope, PromptLyService) {
 
   $scope.addPromptLy = function (obj) {
+    // console.log("ok", obj);
     PromptLyService.addPromptLy(obj).then(function (res) {
+      console.log(res);
       $scope.promptly = {};
     });
   };
@@ -251,8 +253,8 @@ var PromptLyService = function PromptLyService($http, PARSE) {
   };
 
   this.addPromptLy = function (obj) {
-    var write = new PromptLy(obj);
-    return $http.post(url, write, PARSE.CONFIG);
+    var w = new PromptLy(obj);
+    return $http.post(url, w, PARSE.CONFIG);
   };
 
   this.update = function (obj) {
