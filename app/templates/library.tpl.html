@@ -1,0 +1,10 @@
+<h3>Library</h3>
+
+<ul>
+  <li ng-repeat="promptly in promptlys">
+    <a href="#/read/{{ promptly.objectId }}">
+<img src="{{ promptly.photo}}" alt="Author Photo">
+    <br>
+    {{ promptly.title }} by {{ promptly.author }}
+  </li>
+</ul>

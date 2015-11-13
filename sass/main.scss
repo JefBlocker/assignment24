@@ -1,6 +1,42 @@
-// Put any @imports here
-// See Readme for a list of supported ones
+@import "foundation";
+// Vivid Auburn
+// #932923
+// Cherrywood
+// #691C17
+// Nero
+// #252525
+// Coconut Cream
+// #DCDFBB
+
 
 body {
-  background: #e2ebf3;
+  background: #DCDFBB;
+  color: #252525;
+  position: relative;
+}
+
+.container {
+  width: 600px;
+  margin: 20px auto;
+}
+
+#nero {
+  color: #252525;
+}
+
+#cherrywood {
+  color: #691C17;
+}
+
+#vividauburn {
+  color: #932923;
+}
+
+ul {
+  list-style: none;
+}
+
+img { 
+border: 1px solid #691C17;
+border-radius: 5px;
 }

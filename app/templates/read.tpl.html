@@ -1,0 +1,14 @@
+<h3>{{ promptly.title }}</h3>
+
+<p><img src="{{ promptly.photo}}" alt="Author Photo"> by {{ promptly.author }}</p>
+
+<p>Genre: {{ promptly.genre }}</p>
+
+<p>Writing Prompt: {{ promptly.prompt }}</p>
+
+<p>{{ promptly.entry }}</p>
+
+<hr>
+
+<a href="#/revise/{{ promptly.objectId }}">Revise</a> | 
+<a href="#" ng-click="delete(singlePromptLy)">Rip It Up</a>
